@@ -21,16 +21,16 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Situação</td>
+						<td>SituaÃ§Ã£o</td>
 						<td>
-							<input type="text" id="status" ng-model="taskForm.status" size="30" />
-							<!-- 
-							<select ng-model="taskForm.status" ng-options="option.name for option in statusOptions"></select>
-							-->							
+							<select ng-model="taskForm.status" name='statusTask' id="statusTask">
+								<option value=''>Selecione uma situaÃ§Ã£o</option>
+								<option ng-repeat="option in statusOptions" value="{{ option.value }}" ng-selected="taskForm.status == option.value">{{ option.name }}</option>
+							</select>
 						</td>
 					</tr>
 					<tr>
-						<td>Descrição</td>
+						<td>DescriÃ§Ã£o</td>
 						<td>
 							<input type="text" id="descricao" ng-model="taskForm.descricao" size="30" />
 						</td>
@@ -47,10 +47,10 @@
 		<div class="table-responsive">
 			<table class="table table-bordered" style="width: 800px">
 				<tr>
-					<th>Título</th>
-					<th>Situação</th>
-					<th>Descrição</th>
-					<th style="width: 15%">Operações</th>
+					<th>TÃ­tulo</th>
+					<th>SituaÃ§Ã£o</th>
+					<th>DescriÃ§Ã£o</th>
+					<th style="width: 15%">OperaÃ§Ãµes</th>
 				</tr>	
 				<tr ng-repeat="task in tasks">
 					<td>{{ task.titulo }}</td>

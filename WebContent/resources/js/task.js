@@ -13,7 +13,7 @@ app.controller('taskController', function($scope, $http) {
 	                        	{"name":"Inativo","value":"I"},
 	                        	{"name":"Bloqueado","value":"B"},
 	                        	{"name":"Removido","value":"R"},
-	                        	{"name":"Concluído","value":"C"}
+	                        	{"name":"Finalizado","value":"F"}
 	                       ];
 	//$scope.statusModel = $scope.orderOptions[1];
 	getTaskDetails();

@@ -54,7 +54,7 @@
 				</tr>	
 				<tr ng-repeat="task in tasks">
 					<td>{{ task.titulo }}</td>
-					<td>{{ task.status }}</td>
+					<td ng-repeat="option in statusOptions | filter: { value: task.status }">{{ option.name }}</td>
 					<td>{{ task.descricao }}</td>
 					<td>
 						<a ng-click="editTask(task)" class="btn btn-primary btn-sm">Edit</a>
